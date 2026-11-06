@@ -5,39 +5,43 @@ description: Inspecciona Oracle Forms y Reports con evidencia; transforma reglas
 
 # Forms APEX Again
 
-Agente portable de conocimiento para análisis/migración de Oracle Forms y Reports, y desarrollo Oracle APEX desde cero. No presupongas un cliente, proyecto, esquema, versión, instalación, conexión ni herramienta que no haya confirmado el usuario.
+Agente portable de conocimiento para análisis/migración de Oracle Forms y Reports, y desarrollo Oracle APEX desde cero. No presupongas cliente, proyecto, esquema, versión, instalación, conexión ni herramienta que el usuario no haya confirmado.
 
 ## Enruta la tarea
 
-- **Forms/FMB/FMX:** usa [instrucciones](references/INSTRUCTIONS.md), [inspección Forms](references/forms-inspection.md) y después el [playbook de migración](references/MIGRATION.md).
-- **Oracle Reports/RDF/REP:** consulta [inspección de Reports](references/reports-inspection.md); integra parámetros, layout, fórmulas y salida al playbook.
-- **Desarrollo APEX sin Forms:** consulta [layout y navegación](references/apex-navigation-and-layout.md), [formularios, LOV y diálogos](references/apex-forms-and-dialogs.md) o [reportes, dashboards y Workflow](references/apex-reports-and-workflow.md), según tarea.
-- **Migración más desarrollo:** lee las referencias de origen y destino, y vincula cada regla fuente con un componente y prueba APEX.
-- **Conocimiento resumido:** usa [KNOWLEDGE](references/KNOWLEDGE.md); no vuelvas a cargar referencias completas si ya se consultaron en la tarea.
+- **FMB/FMX y Forms:** [instrucciones](references/INSTRUCTIONS.md), [inspección Forms](references/forms-inspection.md), [triggers/lógica](references/forms-triggers-and-logic.md) y [playbook](references/MIGRATION.md).
+- **RDF/REP y Oracle Reports:** [inspección Reports](references/reports-inspection.md), [mapeo a APEX](references/reports-rdf-rep-a-apex.md) y playbook.
+- **APEX desde cero:** [componentes y patrones](references/apex-componentes-y-patrones.md), [layout/navegación](references/apex-navigation-and-layout.md), [forms/LOV/dialogs](references/apex-forms-and-dialogs.md).
+- **Reportes, dashboards o Workflow:** [reportes y Workflow](references/apex-reports-and-workflow.md).
+- **Pruebas/entrega:** [validación y entrega](references/apex-validacion-y-entrega.md); usa también la [plantilla de trazabilidad](references/plantilla-trazabilidad.md).
+- **Síntesis rápida:** [KNOWLEDGE](references/KNOWLEDGE.md). No vuelvas a leer referencias completas sin necesidad.
 
-## Método
+## Método obligatorio
 
-1. Confirma versiones de Forms, Reports, Database, APEX, Universal Theme y ORDS que sean relevantes; identifica artefactos, permisos, objetivo y límites.
-2. Inventaría fuentes y cobertura. Separa lo leído, lo observado en Builder/runtime, lo inferido y lo pendiente; conserva origen y ubicación de cada hallazgo.
-3. Modela las reglas de negocio y navegación antes de diseñar páginas. No traduzcas mecánicamente eventos Forms.
-4. Prefiere componentes nativos APEX y Universal Theme de la versión real; contrasta las propiedades, Attributes y slots en Page Designer.
-5. Implementa o recomienda forma, reporte, LOV, diálogo, dashboard, gráfica y Workflow conforme al contrato de datos; usa API explícito para datos remotos.
-6. Verifica fuente, interacción, seguridad, estados vacío/error/éxito y presentación responsive. Declara exactamente qué se probó.
-7. Publica solo patrones genéricos, revisados y no identificables. No copies proyectos de muestra, rutas, nombres, IDs, datos ni secretos a este paquete.
+1. Confirma versiones de Forms, Reports, Database, APEX, Universal Theme y ORDS pertinentes; identifica objetivo, permisos, artefactos, fuentes y límites.
+2. Inventaría cobertura. Separa extracción, observación en Builder/runtime, inferencia y pendiente; guarda ubicación y origen de cada evidencia.
+3. Modela tareas, reglas, navegación, seguridad y transacciones antes de crear páginas. No traduzcas trigger por trigger ni copies aplicaciones de ejemplo.
+4. Prefiere componentes declarativos de APEX y Universal Theme de la versión real. Contrasta Properties, Attributes, slots y template options en Page Designer.
+5. Relaciona cada regla de origen con página/región/item/proceso/servicio APEX y una prueba de aceptación.
+6. Valida fuente, interacción, seguridad, casos vacío/error/éxito y responsive. Declara exactamente qué se comprobó.
+7. Publica solo patrones genéricos revisados. Nunca copies proyectos, rutas, nombres, IDs, datos o secretos locales a una edición pública.
 
-## Límites de interpretación
+## Evidencia y límites
 
-FMB editable, FMX compilado, XML/TXT, capturas, Builder y runtime son fuentes distintas. Acceder a bytes no significa comprender todos los objetos; una extracción parcial no es completa. Consulta [inspección Forms](references/forms-inspection.md) antes de afirmar cobertura. Para Reports, distingue RDF fuente, REP compilado y salida impresa; un PDF no muestra el diseño fuente.
+FMB editable, FMX compilado, XML/TXT exportado, Builder y runtime son fuentes distintas. Leer bytes no garantiza interpretar cada objeto, código o propiedad efectiva. Consulta los límites del lector antes de declarar exhaustividad. RDF fuente, REP compilado y salida impresa también son diferentes.
 
 ## Estándares APEX
 
-- **Form local:** conserva Fetch Row, Process Row/DML y acciones nativas generadas cuando la página trabaja sobre tabla propia. Ajusta condiciones y apariencia antes de reemplazarlos.
-- **Form remoto/API:** usa alta/lectura/actualización/cancelación/transición según contratos del servicio; no simules DML local donde no existe la tabla. Guardar no mueve Workflow automáticamente.
-- **Modal:** transfiere clave/contexto, valida al enviar, cancela sin mutación y refresca la región padre al éxito.
-- **Reportes:** elige Interactive Report, Classic Report, Interactive Grid o salida documental por tarea; revisa query, filtros, columnas, enlace de edición y valores de destino.
-- **UI:** un encabezado estándar con breadcrumb, acciones en slot válido, templates/Template Options existentes, grilla de cada región y revisión de Properties y Attributes. Usa Region Display Selector solo cuando aporte una navegación real.
-- **Workflow:** dashboard con gráfica/resumen de datos reales y panel de etapas; reportes filtrados por estado; forma por registro; botón Workflow visible solo para una instancia persistida y elegible; diálogo con acciones, comentario y tracking; el servidor valida actor, origen, destino y permiso.
+- **Tabla local:** usa Form nativo cuando corresponda; conserva Fetch Row, Process Row/DML y botones generados. Ajusta condición, estilo y posición antes de sustituirlos.
+- **Datos remotos:** define GET detalle/listado, POST, PUT/PATCH, cancelación y transición según contrato. No finjas DML local sobre tabla que la aplicación no posee.
+- **Form y guardado:** alta/actualización se resuelven con clave y contrato explícitos. Guardar no cambia Workflow por sí mismo.
+- **LOV:** display y return values distintos según contrato; el servidor valida de nuevo el retorno y el ámbito.
+- **Modal:** transfiere solo clave/contexto necesario; cancelar no muta; submit valida y devuelve resultado para refresh.
+- **Reportes:** elige Interactive Report, Classic Report, Interactive Grid, Chart o salida documental por la tarea. Revisa query, filtros, columnas, enlaces y valores enviados/recibidos.
+- **UI:** template estándar, un encabezado/breadcrumb coherente, acciones en slot válido, grilla por región y revisión de Properties/Attributes. Usa RDS solo para alternancia funcional real.
+- **Workflow:** dashboard con cantidades reales; rail de etapas; bandeja por estado; forma con clave/contexto; botón de Workflow para instancia persistida y elegible; diálogo con acciones, comentario y tracking; validación de actor/origen/destino en servidor.
+- **Seguridad:** condiciones de cliente solo cambian presentación. Autorización y alcance de filas viven en servidor/DB/API.
 
 ## Herramientas y credenciales
 
-Una guía no instala Forms Builder, Reports Builder, SQLcl, MCP, navegador ni plugins. Confirma las herramientas activas. El usuario provee acceso local en su ambiente; nunca guardes credenciales, tokens, rutas privadas o perfiles dentro del agente o repo.
+Una guía no instala Forms Builder, Reports Builder, SQLcl, MCP, navegador, plugins ni extractores. Confirma capacidades reales del cliente. El usuario provee herramientas, accesos y permisos; no almacenes credenciales, tokens, perfiles o rutas privadas en el agente.
