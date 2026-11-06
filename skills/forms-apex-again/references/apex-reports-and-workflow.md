@@ -32,6 +32,7 @@ Un enlace no es seguro por estar oculto; el endpoint y la página validan permis
 - Guardar crea/actualiza el registro. No cambia de estado.
 - Workflow solo aparece cuando el registro y su instancia están persistidos y hay al menos una transición disponible.
 - El botón abre página/modal de decisión. Presenta estado actual, acciones válidas, destino, comentario/motivo, destinatario si aplica e historial/tracking.
+- Si el destino se calcula después del guardado y se pasa mediante un item de sesión, el Link Builder puede no mostrar una página fija. Inspecciona el export/proceso y confirma en Runtime que el item se resolvió y abrió el destino correcto; metadata configurada no equivale a navegación probada.
 - Cancelar cierra sin mutación. Enviar llama la operación de transición aprobada y explícita.
 - El servidor comprueba identidad, registro, estado de origen esperado, acción/destino permitidos, actor/responsable, motivo y concurrencia.
 - Después del éxito, relee estado actual, tracking, conteos y bandeja. El estado terminal no se reabre salvo una ruta formal.
