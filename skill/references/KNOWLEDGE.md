@@ -67,3 +67,8 @@ Usa matriz trazable requisito → componente → evidencia → prueba → result
 - En Forms locales sigue usando `Fetch Row`/`Process Row` y DML nativo generado por APEX. Para un origen remoto, usa operaciones API explícitas para alta, edición y cancelación lógica; no crees procesos APEX que aparenten DML sobre tablas que no están en la base del workspace.
 - Distribuye campos por grupos funcionales en la cuadrícula de doce columnas de la región. Usa `Optional` para los items y revisa `New Row`, `Column`, `Column Span` y `Label Column Span`; utiliza Region Display Selector cuando ayude a organizar grupos y mantén las propiedades/atributos de región compatibles con la plantilla estándar.
 - Antes de exportar, lee de vuelta metadata declarativa: tipo de página, plantilla, posiciones, botones/condiciones, consultas/filtros, items enviados/recibidos y procesos. Luego valida por separado apariencia y comportamiento en runtime.
+
+
+## Referencias por tema
+
+Para una guía operativa más extensa usa [inspección Forms](forms-inspection.md), [inspección Reports](reports-inspection.md), [formularios y diálogos APEX](apex-forms-and-dialogs.md), [layout/navegación APEX](apex-navigation-and-layout.md) y [reportes/Workflow APEX](apex-reports-and-workflow.md). Estas guías afinan patrones generales; la versión y configuración del destino siguen siendo la autoridad.
