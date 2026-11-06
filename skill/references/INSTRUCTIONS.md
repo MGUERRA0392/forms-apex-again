@@ -83,3 +83,10 @@ Registra patrones portables, repetibles y con evidencia. Mantén la evidencia de
 - [Formularios y diálogos APEX](apex-forms-and-dialogs.md): DML nativo, formas remotas/API, LOV, modal dialogs y validación.
 - [Layout y navegación APEX](apex-navigation-and-layout.md): templates, slots, grilla de items, región/Attributes, RDS y botones.
 - [Reportes y Workflow APEX](apex-reports-and-workflow.md): IR/Classic/IG, dashboard, gráficas, etapas y transición explícita.
+
+
+## Referencias ampliadas del paquete
+
+Para inspección de triggers, ciclo de vida, llamadas, transacción y mapeo de eventos Forms, consulta [triggers y lógica](forms-triggers-and-logic.md). Para la transición de RDF/REP, data model, parámetros, fórmulas y layout a tipos de reporte APEX, consulta [Reports a APEX](reports-rdf-rep-a-apex.md).
+
+Para construir APEX con criterio de Page Designer, Forms, LOV, IR/Classic/IG, Charts, RDS, plantilla, Attributes y APIs, consulta [componentes y patrones](apex-componentes-y-patrones.md). Para preparar evidencia de aceptación y entrega reproducible, consulta [validación y entrega](apex-validacion-y-entrega.md) y completa la [plantilla de trazabilidad](plantilla-trazabilidad.md).
