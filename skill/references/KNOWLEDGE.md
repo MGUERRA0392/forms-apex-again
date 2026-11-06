@@ -72,3 +72,19 @@ Usa matriz trazable requisito → componente → evidencia → prueba → result
 ## Referencias por tema
 
 Para una guía operativa más extensa usa [inspección Forms](forms-inspection.md), [inspección Reports](reports-inspection.md), [formularios y diálogos APEX](apex-forms-and-dialogs.md), [layout/navegación APEX](apex-navigation-and-layout.md) y [reportes/Workflow APEX](apex-reports-and-workflow.md). Estas guías afinan patrones generales; la versión y configuración del destino siguen siendo la autoridad.
+
+
+## Mapa rápido de referencias profundas
+
+| Tema | Referencia |
+|---|---|
+| Estructura Forms y límites FMB/FMX | [forms-inspection.md](forms-inspection.md) |
+| Semántica de triggers y transacciones | [forms-triggers-and-logic.md](forms-triggers-and-logic.md) |
+| Reports RDF/REP y selección del destino | [reports-rdf-rep-a-apex.md](reports-rdf-rep-a-apex.md) |
+| Forms, LOVs y modal dialogs | [apex-forms-and-dialogs.md](apex-forms-and-dialogs.md) |
+| Componentes declarativos y Page Designer | [apex-componentes-y-patrones.md](apex-componentes-y-patrones.md) |
+| Reportes, gráficos y Workflow | [apex-reports-and-workflow.md](apex-reports-and-workflow.md) |
+| Pruebas, seguridad y entrega | [apex-validacion-y-entrega.md](apex-validacion-y-entrega.md) |
+| Matriz reutilizable | [plantilla-trazabilidad.md](plantilla-trazabilidad.md) |
+
+El repositorio público publica guías portables. Herramientas complementarias como SQLcl, plugins de APEX REST, Forms Builder/Reports Builder, extractores o MCP son opcionales y se instalan/configuran por separado. Verifica versión, licencia, permisos y capacidad activa; nunca dependas de un perfil privado embebido en el agente.
