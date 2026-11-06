@@ -55,3 +55,15 @@ Bind cada consulta a una compañía/principal/asignación validada en servidor. 
 
 Usa matriz trazable requisito → componente → evidencia → prueba → resultado. Comprueba casos vacío, éxito, validación, error de servidor/API, no autorizado, reintento y resolución de destino. Registra versiones, entorno, alcance de datos y limitaciones. No declares equivalencia visual sin mirar runtime, ni funcionalidad por solo inspeccionar el código fuente.
 
+
+
+## Estándar de construcción APEX para Workflow
+
+- En una pantalla de flujo, usa el encabezado Hero con título y breadcrumb en la zona `Breadcrumb Bar`; coloca acciones del encabezado en el slot `Next` que provee la plantilla. Confirma el nombre del slot en Page Designer y valida que se renderice en runtime.
+- Usa botones y Template Options estándar del tema instalado. `Retornar` permanece disponible; diferencia la acción principal con la opción visual estándar adecuada (por ejemplo, `Hot`) y evita CSS para simular plantillas existentes.
+- En el dashboard, combina gráfico por estado, resumen con totales reales, contenido descriptivo útil y lista de estados en la columna lateral; cada estado navega a su reporte filtrado por el identificador real de estado. Usa iconos y rótulos legibles, no añadas números de secuencia al nombre del estado.
+- Cada bandeja debe ser un reporte con consulta y filtros explícitos por estado, y por usuario/compañía cuando el contrato lo permita. Revisa columnas, orden, búsqueda, paginación, enlace `Editar`, valores enviados y los items de destino de la forma. La forma debe conservar la clave y contexto de estado correctos.
+- Una forma API-backed separa `Crear/Guardar` de la transición. El guardado crea o actualiza según la clave persistida; no debe avanzar el flujo automáticamente. Muestra `Workflow` solo con registro e instancia persistidos y mientras haya transición autorizada. Ese botón abre una página/modal de decisión; `Cancelar` no cambia datos y `Enviar` aplica la acción con comentario requerido y vuelve a leer estado e historial.
+- En Forms locales sigue usando `Fetch Row`/`Process Row` y DML nativo generado por APEX. Para un origen remoto, usa operaciones API explícitas para alta, edición y cancelación lógica; no crees procesos APEX que aparenten DML sobre tablas que no están en la base del workspace.
+- Distribuye campos por grupos funcionales en la cuadrícula de doce columnas de la región. Usa `Optional` para los items y revisa `New Row`, `Column`, `Column Span` y `Label Column Span`; utiliza Region Display Selector cuando ayude a organizar grupos y mantén las propiedades/atributos de región compatibles con la plantilla estándar.
+- Antes de exportar, lee de vuelta metadata declarativa: tipo de página, plantilla, posiciones, botones/condiciones, consultas/filtros, items enviados/recibidos y procesos. Luego valida por separado apariencia y comportamiento en runtime.
