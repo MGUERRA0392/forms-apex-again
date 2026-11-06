@@ -1,23 +1,45 @@
 # Forms APEX Again
 
-Guía portable para analizar Oracle Forms y Oracle Reports, planear migraciones con evidencia y diseñar o desarrollar aplicaciones Oracle APEX nativas.
+Agente portátil, en español, para inspeccionar Oracle Forms y Oracle Reports, planear migraciones con evidencia y desarrollar aplicaciones Oracle APEX nativas.
 
-Este repositorio reúne instrucciones, criterios técnicos y referencias públicas. No contiene artefactos de clientes, exportaciones de bases de datos, credenciales, URLs privadas, perfiles de conexión ni rutas de una estación de trabajo. Tampoco concede acceso a sistemas Oracle ni garantiza que una herramienta opcional esté instalada.
+Este repositorio público se mantiene deliberadamente centrado en instrucciones y referencias reutilizables. No replica el repositorio privado de desarrollo: aquel contiene implementación del agente, paquetes/distribuciones versionadas y validaciones de una instalación concreta. Aquí se publica el núcleo portable para que una persona lo adapte a su entorno.
 
-## Inicio rápido
+## Mapa de conocimiento
 
-Lee [`skill/SKILL.md`](skill/SKILL.md) y carga solo las referencias necesarias para el trabajo:
+Empieza por la skill y sigue solo la referencia pertinente:
 
-- [`INSTRUCTIONS.md`](skill/references/INSTRUCTIONS.md): evidencia, seguridad, lectura de Forms/Reports y estándares de desarrollo APEX.
-- [`MIGRATION.md`](skill/references/MIGRATION.md): método repetible de análisis, trazabilidad, migración y aceptación.
-- [`KNOWLEDGE.md`](skill/references/KNOWLEDGE.md): criterios portables de extracción, formularios, reportes, Workflow y verificación.
-- [`REFERENCES.md`](skill/references/REFERENCES.md): manuales Oracle y playbooks públicos consultados.
+| Necesidad | Guía |
+|---|---|
+| Elegir el recorrido y límites de seguridad | [Skill principal](skill/SKILL.md) |
+| Método completo de migración y aceptación | [Playbook de migración](skill/references/MIGRATION.md) |
+| Cómo inspeccionar FMB, FMX, lienzos, triggers y LOV | [Inspección de Forms](skill/references/forms-inspection.md) |
+| Oracle Reports, RDF/REP, modelos, parámetros y salidas | [Inspección de Reports](skill/references/reports-inspection.md) |
+| Forms de alta/edición, DML nativo vs API, LOV y modal dialogs | [Formularios y diálogos APEX](skill/references/apex-forms-and-dialogs.md) |
+| Interactive/Classic Reports, gráficas, dashboard y Workflow | [Reportes y Workflow APEX](skill/references/apex-reports-and-workflow.md) |
+| Page Designer, templates, botones, grilla, RDS y navegación | [Layout y navegación](skill/references/apex-navigation-and-layout.md) |
+| Política de evidencia, extracción, APEX y verificación | [Instrucciones operativas](skill/references/INSTRUCTIONS.md) |
+| Patrones técnicos sintetizados | [Conocimiento reutilizable](skill/references/KNOWLEDGE.md) |
+| Lecturas públicas y documentación Oracle | [Referencias](skill/references/REFERENCES.md) |
 
-Antes de reutilizar una recomendación, confirma versiones, artefactos, componentes disponibles, acceso autorizado y requisitos del sistema actual. Un ejemplo de otra aplicación no sustituye la evidencia del destino real.
+## Qué puede hacer el agente
 
-## Alcance y distribución
+- Inventariar estructura y comportamiento de Forms: ventanas, canvases/lienzos, bloques, items, LOVs, record groups, triggers, unidades y dependencias que la fuente permita leer.
+- Distinguir el nivel de evidencia de FMB editable, FMX compilado, XML/TXT, Builder y runtime; declarar cobertura y límites del extractor.
+- Analizar Oracle Reports separando query/modelo, grupos, fórmulas, triggers, parámetros, layout y destino de salida.
+- Diseñar o implementar páginas APEX: formularios, reportes, páginas modales, navegación, LOVs, gráficas, dashboards y flujos Workflow.
+- Preferir componentes nativos del APEX/Universal Theme destino y validar Page Designer y Runtime por separado.
+- Entregar una matriz trazable: evidencia fuente → regla → componente/API destino → prueba → resultado.
 
-El agente ayuda a analizar y desarrollar en ambientes que el usuario autorice. El usuario aporta archivos, conexiones, credenciales y permisos en su propia instalación. Mantén los hallazgos específicos de cada proyecto en su espacio privado; publica aquí solo patrones revisados que puedan reutilizarse sin identificar clientes ni ambientes.
+La presencia de una skill no instala Oracle Forms, APEX, SQLcl, MCP ni plugins. El usuario proporciona sus propios artefactos, conexiones, herramientas y permisos. El agente no contiene credenciales.
 
-Las referencias externas son proyectos independientes. Revisa su licencia antes de copiar código o texto sustancial. Este repositorio todavía no incluye una licencia: no asumas que permite redistribuir su contenido.
+## Instalación y uso
 
+Carga skill/SKILL.md con el mecanismo de skills que soporte tu cliente de Codex/Claude Code. Si ese cliente no descubre el directorio del repositorio automáticamente, copia la carpeta skill a su ubicación de skills de usuario y conserva juntas las referencias bajo skill/references. Confirma en el cliente qué capacidades están realmente activas antes de iniciar análisis.
+
+Para una tarea concreta entrega versiones y artefactos autorizados, objetivo, límites, fuentes disponibles y resultado esperado. No incluyas secretos en prompts, repositorios ni exports.
+
+## Privacidad, licencia y contribuciones
+
+El contenido es genérico y no incluye artefactos, esquemas, URLs privadas, nombres de clientes, rutas locales ni datos reales de la empresa. Antes de contribuir, anonimiza ejemplos y verifica que el material pueda publicarse.
+
+La visibilidad pública permite consultar el contenido, pero el repositorio no declara todavía una licencia de reutilización. No supongas que se pueden redistribuir textos o código de terceros. Las fuentes externas enlazadas son independientes; revisa su licencia antes de reutilizar contenido sustancial.
