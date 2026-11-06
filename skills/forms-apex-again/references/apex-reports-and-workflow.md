@@ -43,6 +43,8 @@ No infieras que una etapa es una acción. La definición puede tener estados y v
 
 Antes de crear páginas, reúne los contratos de lectura, listado, conteos, detalle, alta, actualización, cancelación y transición. Por cada endpoint registra método, ruta, autenticación/autorización, parámetros, respuesta, errores, idempotencia, timeout, logging y propietario de la transacción. Usa alias/perfiles locales del usuario para secretos; nunca incluyas secretos en la aplicación exportada, skill o repo.
 
+Mantén separados los módulos ORDS por dominio y responsabilidad: el módulo del negocio posee su CRUD, archivos y catálogos; el módulo Workflow contiene únicamente capacidades reutilizables del motor, como definiciones, estados, instancias, acciones, transiciones y seguimiento. La interfaz puede coordinar ambos contratos, pero guardar un objeto de negocio no debe iniciar ni transicionar el flujo. Migra consumidores conservando el contrato heredado hasta verificar dependencias y compatibilidad.
+
 ## Tipos de reporte
 
 - Interactive Report para búsqueda/ad hoc, filtros/orden y vistas guardadas.
