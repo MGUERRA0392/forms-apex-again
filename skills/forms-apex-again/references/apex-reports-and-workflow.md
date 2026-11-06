@@ -55,3 +55,15 @@ No conviertas todo a Interactive Report por defecto. Elige según tarea y prueba
 ## Navegación y estado vacío
 
 Los estados y filtros de entrada se conservan conscientemente. Un reporte vacío presenta un mensaje útil y no habilita una transición imposible. El usuario debe poder regresar al dashboard y reconocer el paso por el encabezado y breadcrumb.
+
+
+## Verificación de un flujo en Runtime
+
+- Crea solo un dato sintético autorizado desde la interfaz y registra la clave de prueba sin incluir información personal.
+- Verifica por separado alta/guardado, actualización y transición. Guardar no debe mover el estado; la transición requiere una acción explícita.
+- Confirma que el botón Workflow aparece solo con una clave persistida, acciones disponibles y estado no terminal; al abrirlo, revisa origen, destinos, campos obligatorios y confirmación.
+- Tras enviar, relee el registro, bandeja, conteos y tracking. Verifica el estado terminal y que no ofrezca una continuación ordinaria.
+- Prueba también datos vacíos, validación fallida, rechazo, devolución y error del servicio antes de declarar el flujo listo.
+- Distingue la evidencia funcional del recorrido feliz de la paridad visual, seguridad por fila y pruebas de error. Un filtro del reporte o un botón oculto no reemplazan autorización del servidor.
+
+No publiques datos de prueba, IDs, nombres de clientes, endpoints privados ni detalles de ambiente. Conserva en el repositorio únicamente estas prácticas portables.
