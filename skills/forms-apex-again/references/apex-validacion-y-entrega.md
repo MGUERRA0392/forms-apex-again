@@ -30,6 +30,12 @@ Comparar conteos con query fuente, filtro efectivo, etiquetas, combinación de c
 ### Workflow
 Guardar no transiciona; botón visible solo con instancia persistida/acción disponible; cancelar no cambia estado; enviar valida origen/actor/destino/motivo; rechazo muestra error; éxito relee estado/tracking/conteos; terminal sin rutas no ofrece transiciones. Usa instancia sintética autorizada y no borres auditoría.
 
+## Claves de negocio en pruebas positivas
+
+- Un valor sintético arbitrario puede satisfacer la validación de presencia y aun así no ser un registro válido del dominio. No inventes claves de negocio ni uses identificadores reales sin autorización.
+- Si falta una clave requerida, registra el resultado como bloqueado por validación y confirma si la petición al API llegó a ejecutarse; no lo informes como un fallo del endpoint ni como un alta probada.
+- Reanuda la prueba positiva solo con un fixture/identificador de prueba aprobado por el responsable de los datos, o detén el caso si no existe.
+
 ## Seguridad y accesibilidad
 
 Prueba identidad/rol permitido y denegado; manipulación de items; URL directa; claves de otro usuario; autorización en servidor; escape de texto; exposición en logs; keyboard/focus, labels y contraste. Condiciones de botón controlan apariencia, nunca autorización.
