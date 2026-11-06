@@ -59,3 +59,12 @@ Registra versiones, entorno, alcance de datos de prueba, acciones exactas, resul
 
 Publica solo patrones portables que hayan sido revisados. Mantén nombres de proyecto, esquemas, APIs internos, conexión, rutas y datos de negocio en el repositorio privado autorizado. Revisa licencia y versión de las fuentes externas antes de reutilizar material.
 
+
+
+## Referencias operativas relacionadas
+
+- [Inspección Forms](forms-inspection.md) cubre lienzos, triggers, LOVs y límites FMB/FMX.
+- [Inspección Reports](reports-inspection.md) distingue modelo de datos, salida interactiva y documento paginado.
+- [Formularios y diálogos APEX](apex-forms-and-dialogs.md) cubre DML generado, API remoto, modales y retorno.
+- [Layout y navegación APEX](apex-navigation-and-layout.md) cubre templates, slots, atributos, RDS y grilla.
+- [Reportes y Workflow APEX](apex-reports-and-workflow.md) cubre reportes por estado, dashboard y transiciones seguras.
