@@ -37,6 +37,7 @@ Un nivel no implica el siguiente. Conserva nombres duplicados, relaciones dudosa
 
 ## Dashboard y Workflow
 
+- Mantén separado el módulo reutilizable del motor Workflow (definiciones, estados, acciones, instancias, transiciones e historial) del módulo ORDS de cada dominio (solicitudes, documentos, archivos, catálogos y su CRUD). El agente que construye el dominio define sus endpoints con el agente de APIs; Forms/APEX los consume. La interfaz guarda primero y llama al motor solo mediante una acción explícita de Workflow.
 - Un dashboard de Workflow normalmente combina título/encabezado con acciones, gráfica por estado, resumen total y panel de navegación por etapas.
 - Un estado puede corresponder a un Interactive Report o bandeja, y a una forma enlazada por clave; verifica filtros, enlaces, botones, destinatario y estado transmitido.
 - Los estados visibles y el total deben provenir de resultados reales. Una respuesta vacía se representa como “sin datos”; nunca inventes cantidades.
