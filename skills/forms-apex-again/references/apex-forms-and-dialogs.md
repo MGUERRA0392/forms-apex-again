@@ -69,3 +69,12 @@ Si una acción es sensible, confirma datos, motivo y alcance antes de enviar. El
 ## Comprobación
 
 Prueba alta, edición, consulta, cancelación, errores, clave inválida, valores de LOV manipulados, permisos insuficientes, timeout API, reapertura y viewport estrecho. Inspecciona configuración en Page Designer y resultado en Runtime.
+
+
+## Formularios nativos y formularios con API
+
+- Si los datos residen en una tabla del parsing schema y el caso requiere DML estándar, usa el asistente de formulario de APEX y conserva sus procesos Fetch Row/Process Row y botones Create, Save/Update, Delete o Cancel que correspondan. Confirma los procesos que genera la versión destino.
+- Si los datos residen fuera del parsing schema, conserva los componentes y la experiencia de formulario APEX, pero conecta Guardar a operaciones API explícitas de alta/edición. No simules Automatic Row Processing ni crees procesos DML contra una tabla local inexistente.
+- Mantén Guardar independiente de Workflow. Después de persistir la clave, muestra la acción Workflow solo cuando el servidor confirme una transición disponible y no terminal. El botón abre una página/modal; cancelar no cambia estado y enviar invoca la operación de transición.
+- Usa condiciones de servidor para presentación y valida de nuevo cada acción en el servidor. Ocultar un botón no autoriza ni protege el endpoint.
+- Distingue alta, edición, cancelación lógica y transición en el contrato. “Eliminar” puede significar cancelar y conservar historial; sigue el API y sus reglas, no asumas borrado físico.
