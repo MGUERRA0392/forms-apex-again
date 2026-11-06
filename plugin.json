@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "forms-apex-again",
+  "version": "1.0.0",
+  "description": "Agente en español para analizar Oracle Forms y Reports y desarrollar Oracle APEX con evidencia.",
+  "author": {
+    "name": "MGUERRA0392"
+  },
+  "homepage": "https://github.com/MGUERRA0392/forms-apex-again",
+  "repository": "https://github.com/MGUERRA0392/forms-apex-again",
+  "keywords": [
+    "oracle-forms",
+    "oracle-reports",
+    "oracle-apex",
+    "migration",
+    "spanish"
+  ]
+}
