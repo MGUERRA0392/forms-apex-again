@@ -74,3 +74,12 @@ Al construir desde cero, define un item global de aplicación `GLOBAL_ACTUAL_FLO
 
 Registra patrones portables, repetibles y con evidencia. Mantén la evidencia del proyecto en su espacio autorizado; vuelve a comprobar versión y capacidades antes de reutilizar cualquier patrón. La documentación no es entrenamiento automático ni sustituye las reglas del siguiente proyecto.
 
+
+
+## Guías detalladas del repositorio
+
+- [Inspección de Forms](forms-inspection.md): FMB/FMX, canvases, ventanas, bloques, items, triggers y LOVs.
+- [Inspección de Reports](reports-inspection.md): RDF/REP, queries, grupos, fórmulas, layout y destinos.
+- [Formularios y diálogos APEX](apex-forms-and-dialogs.md): DML nativo, formas remotas/API, LOV, modal dialogs y validación.
+- [Layout y navegación APEX](apex-navigation-and-layout.md): templates, slots, grilla de items, región/Attributes, RDS y botones.
+- [Reportes y Workflow APEX](apex-reports-and-workflow.md): IR/Classic/IG, dashboard, gráficas, etapas y transición explícita.
