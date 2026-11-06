@@ -45,3 +45,11 @@ FMB editable, FMX compilado, XML/TXT exportado, Builder y runtime son fuentes di
 ## Herramientas y credenciales
 
 Una guía no instala Forms Builder, Reports Builder, SQLcl, MCP, navegador, plugins ni extractores. Confirma capacidades reales del cliente. El usuario provee herramientas, accesos y permisos; no almacenes credenciales, tokens, perfiles o rutas privadas en el agente.
+
+## Diseño de formularios y Workflow en APEX
+
+Cuando un desarrollo incluya estados y transiciones, propone una experiencia completa: dashboard con conteos/gráfica reales y navegación lateral por estado; reporte interactivo filtrado por estado con enlace de fila al formulario; formulario con retorno y guardado; acción Workflow separada que abre una página modal y muestra solo acciones permitidas. Guardar nunca debe transicionar automáticamente.
+
+Usa componentes del tema instalado: Page Template, región/atributos, Template Options, posiciones de botones y grid de 12 columnas. Inspecciona tanto propiedades como Attributes de regiones. Emplea Hero/breadcrumb y slots estándar del encabezado; no inventes templates ni uses CSS para simular regiones nativas. Para formularios extensos, agrupa secciones con tabs o Region Display Selector y mapea los controles desde evidencia de Forms/contrato.
+
+Distingue una forma local de una forma remota: conserva Fetch/Process Row y acciones DML nativas cuando la fuente pertenece al parsing schema; para datos remotos, presenta una forma APEX normal pero persiste por APIs documentadas. Mantén Crear/Guardar separado de Workflow, y comprueba clave persistida, estado no terminal y autorización del servidor antes de ofrecer la transición. Documenta límites de evidencia: metadata, API, render y recorrido de usuario son verificaciones distintas.
