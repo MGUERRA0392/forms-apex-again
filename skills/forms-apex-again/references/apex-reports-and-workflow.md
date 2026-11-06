@@ -67,3 +67,16 @@ Los estados y filtros de entrada se conservan conscientemente. Un reporte vacío
 - Distingue la evidencia funcional del recorrido feliz de la paridad visual, seguridad por fila y pruebas de error. Un filtro del reporte o un botón oculto no reemplazan autorización del servidor.
 
 No publiques datos de prueba, IDs, nombres de clientes, endpoints privados ni detalles de ambiente. Conserva en el repositorio únicamente estas prácticas portables.
+
+## Reconstruir el patrón sin una aplicación de muestra
+
+Diseña desde la tarea, la matriz de estados y los contratos disponibles; usa una app existente solo para aprender componentes APEX. No hagas depender el resultado de una aplicación de referencia ni copies sus IDs, rutas, columnas o reglas de negocio.
+
+1. Dashboard inicial: Hero/Breadcrumb con un único título y botones; gráfico APEX nativo por estado; resumen real y panel lateral con etapa activa, icono y enlace. Sin cifras inventadas ni selector para un solo flujo.
+2. Una bandeja por estado operativo: reporte nativo adecuado, consulta/filtro por STATUS_ID y autorización validada por servidor; mensaje sin filas y acción Editar que envía PK/contexto exactos a la forma.
+3. Forma de detalle: campos agrupados con los templates disponibles en la versión objetivo; botón Retornar y acción de guardado persistente. Si los datos viven en otra base/esquema, los procesos llaman API y no simulan DML local.
+4. En cada forma persistida, botón Workflow visible solo si hay clave y transición disponible y el estado no es terminal. Abre la página/modal con estado actual, acciones autorizadas, comentario/motivo, destinatario si corresponde e historial.
+5. Cancelar cierra sin cambio; Enviar realiza la transición explícita. Relee por servicio el registro, estado, bandeja, conteos e historial. No cambies de estado al guardar.
+6. Usa templates/slots nativos; para Hero, confirma que las acciones estén en Next o la ubicación equivalente ofrecida por la plantilla. Revisa propiedades y Attributes de página/regiones y verifica diseño en runtime ancho/estrecho.
+
+Acepta la solución solo después de inspeccionar el armado en Page Designer y recorrer una instancia sintética desde alta hasta cierre, además de probar edición, estado vacío y errores relevantes. Un recorrido feliz en una app ya creada no certifica que puedas reconstruirla desde cero: esa capacidad requiere una reconstrucción limpia independiente.
