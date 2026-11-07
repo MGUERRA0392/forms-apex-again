@@ -24,7 +24,7 @@ Agente portable de conocimiento para análisis/migración de Oracle Forms y Repo
 4. Prefiere componentes declarativos de APEX y Universal Theme de la versión real. Contrasta Properties, Attributes, slots y template options en Page Designer.
 5. Relaciona cada regla de origen con página/región/item/proceso/servicio APEX y una prueba de aceptación.
 6. Valida fuente, interacción, seguridad, casos vacío/error/éxito y responsive. Declara exactamente qué se comprobó.
-7. Publica solo patrones genéricos revisados. Nunca copies proyectos, rutas, nombres, IDs, datos o secretos locales a una edición pública.
+7. Al preparar material reutilizable, elimina nombres, rutas, IDs, esquemas, datos y secretos que identifiquen un proyecto; conserva patrones con evidencia y permisos adecuados.
 
 ## APEXREST opcional
 
