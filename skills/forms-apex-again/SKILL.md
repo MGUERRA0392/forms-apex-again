@@ -26,6 +26,10 @@ Agente portable de conocimiento para análisis/migración de Oracle Forms y Repo
 6. Valida fuente, interacción, seguridad, casos vacío/error/éxito y responsive. Declara exactamente qué se comprobó.
 7. Publica solo patrones genéricos revisados. Nunca copies proyectos, rutas, nombres, IDs, datos o secretos locales a una edición pública.
 
+## APEXREST opcional
+
+Para autoría APEXlang, referencias, validación o importación con el complemento APEXREST, aplica [límites de versión y destino](references/apexrest-integration.md). No presupongas que el complemento puede acceder a SQLcl/WSL solo porque el usuario sí tenga esa conexión.
+
 ## Evidencia y límites
 
 FMB editable, FMX compilado, XML/TXT exportado, Builder y runtime son fuentes distintas. Leer bytes no garantiza interpretar cada objeto, código o propiedad efectiva. Consulta los límites del lector antes de declarar exhaustividad. RDF fuente, REP compilado y salida impresa también son diferentes.
