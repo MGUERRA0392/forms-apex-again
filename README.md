@@ -39,3 +39,9 @@ El usuario proporciona sus propios artefactos, permisos y conexiones. No incluya
 ## Desarrollo APEX con Workflow
 
 La guía principal incluye criterios de formularios locales y remotos, reportes por estado, navegación, templates/atributos, modal de Workflow y validación por capas. Usa ejemplos propios del proyecto destino y confirma su versión y contrato antes de aplicar el patrón.
+
+
+## Herramienta opcional y revisión
+
+- Integración segura de APEXREST, límites por versión y destino: [guía de APEXREST](skills/forms-apex-again/references/apexrest-integration.md).
+- [Revisión estática del paquete](evals/revision-2026-11-07.md): escenarios de migración, desarrollo APEX y APEXREST; no sustituye una ejecución real del agente.
