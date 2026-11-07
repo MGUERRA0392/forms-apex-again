@@ -45,3 +45,8 @@ La guía principal incluye criterios de formularios locales y remotos, reportes 
 
 - Integración segura de APEXREST, límites por versión y destino: [guía de APEXREST](skills/forms-apex-again/references/apexrest-integration.md).
 - [Revisión estática del paquete](evals/revision-2026-11-07.md): escenarios de migración, desarrollo APEX y APEXREST; no sustituye una ejecución real del agente.
+
+
+## Evaluación
+
+- [Evaluación guiada de migración y desarrollo APEX](evals/evaluacion-guiada-2026-11-07.md): revisión de escenarios documentales; no equivale a ejecutar un agente remoto.
