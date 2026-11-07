@@ -17,6 +17,7 @@ Guía y agente portable en español para analizar Oracle Forms y Reports, recupe
 | Page Designer, templates, grilla y navegación | [Layout y navegación](skills/forms-apex-again/references/apex-navigation-and-layout.md) |
 | Formularios, IR, Classic, IG, Charts y RDS | [Componentes APEX](skills/forms-apex-again/references/apex-componentes-y-patrones.md) |
 | Dashboard, reportes por estado y Workflow | [Reportes y Workflow](skills/forms-apex-again/references/apex-reports-and-workflow.md) |
+| Formulario remoto y transición explícita | [API y Workflow](skills/forms-apex-again/references/apex-formulario-api-workflow-explicito.md) |
 | Pruebas y entrega | [Validación y entrega](skills/forms-apex-again/references/apex-validacion-y-entrega.md) |
 | Matriz de trazabilidad | [Plantilla](skills/forms-apex-again/references/plantilla-trazabilidad.md) |
 | Síntesis de patrones | [KNOWLEDGE](skills/forms-apex-again/references/KNOWLEDGE.md) |
