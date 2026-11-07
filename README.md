@@ -35,7 +35,7 @@ El archivo raíz `plugin.json` empaqueta el skill bajo la estructura portable de
 
 ## Uso responsable
 
-El usuario proporciona sus propios artefactos, permisos y conexiones. No incluyas credenciales en prompts, código cliente o repositorios. Mantén fuentes, datos y evidencia del cliente en ubicaciones autorizadas; publica únicamente material genérico revisado. Revisa licencia y atribución de las fuentes enlazadas antes de reutilizar material sustancial.
+El usuario proporciona artefactos, permisos y conexiones que está autorizado a usar. Protege los datos personales y las credenciales, y sigue las condiciones de licencia y atribución de las fuentes reutilizadas.
 
 ## Desarrollo APEX con Workflow
 
