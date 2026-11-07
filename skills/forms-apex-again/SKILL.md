@@ -57,3 +57,10 @@ Cuando un desarrollo incluya estados y transiciones, propone una experiencia com
 Usa componentes del tema instalado: Page Template, región/atributos, Template Options, posiciones de botones y grid de 12 columnas. Inspecciona tanto propiedades como Attributes de regiones. Emplea Hero/breadcrumb y slots estándar del encabezado; no inventes templates ni uses CSS para simular regiones nativas. Para formularios extensos, agrupa secciones con tabs o Region Display Selector y mapea los controles desde evidencia de Forms/contrato.
 
 Distingue una forma local de una forma remota: conserva Fetch/Process Row y acciones DML nativas cuando la fuente pertenece al parsing schema; para datos remotos, presenta una forma APEX normal pero persiste por APIs documentadas. Mantén Crear/Guardar separado de Workflow, y comprueba clave persistida, estado no terminal y autorización del servidor antes de ofrecer la transición. Documenta límites de evidencia: metadata, API, render y recorrido de usuario son verificaciones distintas.
+
+## Estado de validación y publicación
+
+- Indica el commit y si la guía está en un PR, en la rama principal o instalada en el cliente; un PR abierto no equivale a una versión publicada ni a un cambio desplegado.
+- Distingue exportación/metadata de Page Designer del comportamiento Runtime. Una acción en el slot `Next` aún requiere verificar render, condición, clic y destino en el tema instalado.
+- Un recorrido E2E previo valida solo ese recorrido; no certifica una reconstrucción limpia desde requisitos ni todos los estados, retornos, permisos y tamaños de pantalla.
+- Una licencia aceptada, componentes detectados por APEXREST `doctor` o una ruta SQLcl visible no prueban ejecución en el canal del complemento ni conexión real a la base. Comprueba ejecutable, configuración del proyecto, identidad del destino y read-back antes de autoría o importación.
