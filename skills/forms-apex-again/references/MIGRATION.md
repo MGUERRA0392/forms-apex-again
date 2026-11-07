@@ -57,7 +57,7 @@ Registra versiones, entorno, alcance de datos de prueba, acciones exactas, resul
 
 ## 7. Promover aprendizaje
 
-Publica solo patrones portables que hayan sido revisados. Mantén nombres de proyecto, esquemas, APIs internos, conexión, rutas y datos de negocio en el repositorio privado autorizado. Revisa licencia y versión de las fuentes externas antes de reutilizar material.
+Al reutilizar patrones entre proyectos, elimina nombres, esquemas, APIs internos, conexiones, rutas e información de negocio. Comprueba permisos, licencia y versión de las fuentes antes de reutilizar material.
 
 
 
