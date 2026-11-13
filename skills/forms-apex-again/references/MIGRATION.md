@@ -97,7 +97,7 @@ Definir primero qué debe conseguir el usuario y qué invariantes deben conserva
 
 Para cada tarea del módulo, registrar un contrato de aceptación con evidencia del origen y casos concretos:
 
-| Fuente o método | Entrada y valor | Límite que debe conservar el análisis |
+| Aspecto | Resultado que debe contrastarse |
 | --- | --- |
 | Selección y captura | Claves, filtros, valores retornados, NULL y listas estáticas correctos |
 | Reglas y permisos | Validación y autorización servidor para cada acción, usuario y estado |
