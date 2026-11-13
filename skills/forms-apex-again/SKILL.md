@@ -36,6 +36,9 @@ FMB editable, FMX compilado, XML/TXT exportado, Builder y runtime son fuentes di
 
 ## Estándares APEX
 
+Para condiciones de visibilidad de botones Submit, consulta [condiciones de render APEX](references/apex-submit-button-condition.md). La condición controla solo el render; vuelve a validar datos, permisos y transiciones en server-side. Mantén Guardar y Workflow separados cuando avanzar dependa de una decisión del usuario.
+
+
 - **Tabla local:** usa Form nativo cuando corresponda; conserva Fetch Row, Process Row/DML y botones generados. Ajusta condición, estilo y posición antes de sustituirlos.
 - **Datos remotos:** define GET detalle/listado, POST, PUT/PATCH, cancelación y transición según contrato. No finjas DML local sobre tabla que la aplicación no posee.
 - **Form y guardado:** alta/actualización se resuelven con clave y contrato explícitos. Guardar no cambia Workflow por sí mismo.
