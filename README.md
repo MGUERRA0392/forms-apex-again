@@ -31,7 +31,9 @@ Copia la carpeta `skills/forms-apex-again` a una ubicación de skills reconocida
 
 ## Usar como plugin
 
-El archivo raíz `plugin.json` empaqueta el skill bajo la estructura portable de Agent Plugins. Instala este repositorio o su raíz como plugin en un cliente que admita ese formato. El plugin solo distribuye instrucciones y referencias: no instala Forms Builder, lectores binarios, MCP, conectores ni servicios de runtime.
+El archivo raíz `plugin.json` empaqueta el skill bajo la estructura portable de Agent Plugins. Para Claude Code se incluye también el manifiesto específico `.claude-plugin/plugin.json`; desde la raíz clonada, valida y prueba localmente con `claude plugin validate .` y `claude --plugin-dir .`, y luego invoca `/forms-apex-again:forms-apex-again`. Cada cliente debe leer el formato de manifiesto que soporta.
+
+El plugin solo distribuye instrucciones y referencias: no instala Forms Builder, lectores binarios, MCP, conectores ni servicios de runtime. Estos comandos son instrucciones de prueba; no se ha validado aquí la carga con una instalación de Claude Code.
 
 ## Uso responsable
 
