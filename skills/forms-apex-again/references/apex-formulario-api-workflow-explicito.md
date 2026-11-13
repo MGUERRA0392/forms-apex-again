@@ -12,6 +12,7 @@ Guía general de construcción para formularios cuyo registro vive detrás de un
 ## Guardar y transicionar son tareas separadas
 
 - Usa DML declarativo de APEX solo cuando la tabla pertenezca al parsing schema y el caso admita ese DML. Para datos remotos, el botón de guardar invoca API de crear/actualizar y lee su respuesta; no configures un Automatic Row Processing contra una tabla remota inexistente.
+- Después de un POST confirmado, recupera la clave, instancia y estado inicial con un GET de detalle autoritativo en servidor; no intentes resolver la fila recién creada mediante un GET agregado de etapas.
 - El botón Workflow aparece solo después de guardar y recuperar una clave/instancia persistida. Guardar no debe avanzar el flujo automáticamente.
 - El botón Workflow abre una página modal. La página consulta acciones permitidas para el estado actual, exige comentarios/fechas/asignación cuando el contrato lo requiera, y presenta el botón Enviar como el único punto de transición explícita.
 - Tras enviar, valida HTTP/resultado, recarga estado e historial y conserva actor, fecha y comentario. La autorización de estado/actor debe comprobarse en el servicio; no confiar en valores editables del navegador.
