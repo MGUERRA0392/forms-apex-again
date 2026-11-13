@@ -83,3 +83,8 @@ Diseña desde la tarea, la matriz de estados y los contratos disponibles; usa un
 6. Usa templates/slots nativos; para Hero, confirma que las acciones estén en Next o la ubicación equivalente ofrecida por la plantilla. Revisa propiedades y Attributes de página/regiones y verifica diseño en runtime ancho/estrecho.
 
 Acepta la solución solo después de inspeccionar el armado en Page Designer y recorrer una instancia sintética desde alta hasta cierre, además de probar edición, estado vacío y errores relevantes. Un recorrido feliz en una app ya creada no certifica que puedas reconstruirla desde cero: esa capacidad requiere una reconstrucción limpia independiente.
+
+
+## Consistencia de gráficos y resúmenes
+
+La gráfica, la tabla de resumen y el total deben representar la misma población y los mismos filtros. En un dashboard APEX que utiliza colecciones, alinea el orden de carga con la consulta asíncrona del gráfico. Si la tabla muestra conteos y la gráfica dice “No data to display”, vuelve a leer el mismo runtime y compara series, etiquetas, valores, estado de carga y filtros antes de cambiar el SQL o la página. Un render posterior correcto sin cambios es una observación transitoria, no una causa raíz demostrada; registra ambos resultados y vuelve a comprobar bajo una carga reproducible.

@@ -1,0 +1,18 @@
+{
+  "name": "forms-apex-again",
+  "displayName": "Forms APEX Again",
+  "version": "1.0.0",
+  "description": "Guía en español para analizar Oracle Forms y Reports con evidencia y desarrollar aplicaciones Oracle APEX.",
+  "author": {
+    "name": "MGUERRA0392"
+  },
+  "homepage": "https://github.com/MGUERRA0392/forms-apex-again",
+  "repository": "https://github.com/MGUERRA0392/forms-apex-again",
+  "keywords": [
+    "oracle-forms",
+    "oracle-reports",
+    "oracle-apex",
+    "migration",
+    "spanish"
+  ]
+}
