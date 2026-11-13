@@ -8,6 +8,8 @@ APEXREST for Codex and Claude Code puede ayudar a redactar y validar fuentes APE
 - Para versiones o tareas no cubiertas por APEXREST, utiliza el export/import compatible con la versión y el flujo SQLcl autorizado por el proyecto, y valida el resultado en runtime.
 - Antes de cualquier escritura, verifica la identidad efectiva del destino mediante evidencia de conexión. Un alias, nombre DNS o indicación en la interfaz no basta para clasificarlo.
 - El complemento limita los despliegues a entornos DEV, QA o TEST. Si el destino figura como producción o la clasificación es ambigua, no configures, reclasifiques ni despliegues con APEXREST.
+- Distingue una detección de herramienta de una ejecución validada: `doctor` puede encontrar una ruta o leer una versión aunque la invocación real falle en el host o contexto de ejecución. Ejecuta el binario por el mismo canal que usará el complemento y registra el resultado.
+- SQLcl ejecutado desde WSL y SQLcl invocado por un MCP en Windows son canales distintos. Que uno funcione no demuestra que el otro pueda ejecutarse ni que comparta perfiles; no copies secretos ni crees adaptadores para saltar permisos.
 - La capacidad de ejecutar SQLcl desde WSL no implica que el proceso MCP de APEXREST pueda invocarlo. Trata ambos canales por separado y no dupliques ni copies secretos para salvar una diferencia de permisos.
 
 ## Secuencia recomendada

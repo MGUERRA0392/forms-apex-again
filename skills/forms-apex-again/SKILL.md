@@ -32,9 +32,15 @@ Para autoría APEXlang, referencias, validación o importación con el complemen
 
 ## Evidencia y límites
 
-FMB editable, FMX compilado, XML/TXT exportado, Builder y runtime son fuentes distintas. Leer bytes no garantiza interpretar cada objeto, código o propiedad efectiva. Consulta los límites del lector antes de declarar exhaustividad. RDF fuente, REP compilado y salida impresa también son diferentes.
+FMB editable, FMX compilado, XML/TXT exportado, Forms Builder y runtime son fuentes distintas. Elige y combina las rutas según la pregunta y la disponibilidad real: inspección del FMB con Builder compatible, lectores estáticos/binarios validados, Object List Report para inventario o búsqueda por lotes, XML si la instalación admite Forms2XML, bibliotecas/código fuente, capturas y comportamiento observado. Ninguna de esas rutas es prerrequisito universal. Si falta una, continúa con las demás y explica el límite concreto.
+
+Para FMX, usa lectores o inspecciones que admitan el formato compilado; no asumas que una herramienta FMB→XML también acepta FMX. Si existe el FMB fuente, contrasta la misma revisión. Para RDF/REP, diferencia diseño fuente, salida compilada y resultado impreso, y selecciona Reports Builder, conversión, inventario o evidencia de ejecución cuando estén disponibles. No exijas un formato de exportación para continuar.
+
+Registra artefacto/hash, método y versión, cobertura por objeto/propiedad, errores, evidencia confirmada, inferencias y pendientes. Un XML bien formado, un reporte de objetos o una extracción parcial no prueban exhaustividad ni equivalencia. No ejecutes código legado durante el análisis.
 
 ## Estándares APEX
+
+Para condiciones de visibilidad de botones Submit, consulta [condiciones de render APEX](references/apex-submit-button-condition.md). La condición controla solo el render; vuelve a validar datos, permisos y transiciones en server-side. Mantén Guardar y Workflow separados cuando avanzar dependa de una decisión del usuario.
 
 - **Tabla local:** usa Form nativo cuando corresponda; conserva Fetch Row, Process Row/DML y botones generados. Ajusta condición, estilo y posición antes de sustituirlos.
 - **Datos remotos:** define GET detalle/listado, POST, PUT/PATCH, cancelación y transición según contrato. No finjas DML local sobre tabla que la aplicación no posee.

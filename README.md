@@ -17,6 +17,7 @@ Guía y agente portable en español para analizar Oracle Forms y Reports, recupe
 | Page Designer, templates, grilla y navegación | [Layout y navegación](skills/forms-apex-again/references/apex-navigation-and-layout.md) |
 | Formularios, IR, Classic, IG, Charts y RDS | [Componentes APEX](skills/forms-apex-again/references/apex-componentes-y-patrones.md) |
 | Dashboard, reportes por estado y Workflow | [Reportes y Workflow](skills/forms-apex-again/references/apex-reports-and-workflow.md) |
+| Formulario remoto y transición explícita | [API y Workflow](skills/forms-apex-again/references/apex-formulario-api-workflow-explicito.md) |
 | Pruebas y entrega | [Validación y entrega](skills/forms-apex-again/references/apex-validacion-y-entrega.md) |
 | Matriz de trazabilidad | [Plantilla](skills/forms-apex-again/references/plantilla-trazabilidad.md) |
 | Síntesis de patrones | [KNOWLEDGE](skills/forms-apex-again/references/KNOWLEDGE.md) |
@@ -30,7 +31,9 @@ Copia la carpeta `skills/forms-apex-again` a una ubicación de skills reconocida
 
 ## Usar como plugin
 
-El archivo raíz `plugin.json` empaqueta el skill bajo la estructura portable de Agent Plugins. Instala este repositorio o su raíz como plugin en un cliente que admita ese formato. El plugin solo distribuye instrucciones y referencias: no instala Forms Builder, lectores binarios, MCP, conectores ni servicios de runtime.
+El archivo raíz `plugin.json` empaqueta el skill bajo la estructura portable de Agent Plugins. Para Claude Code se incluye también el manifiesto específico `.claude-plugin/plugin.json`; desde la raíz clonada, valida y prueba localmente con `claude plugin validate .` y `claude --plugin-dir .`, y luego invoca `/forms-apex-again:forms-apex-again`. Cada cliente debe leer el formato de manifiesto que soporta.
+
+El plugin solo distribuye instrucciones y referencias: no instala Forms Builder, lectores binarios, MCP, conectores ni servicios de runtime. Estos comandos son instrucciones de prueba; no se ha validado aquí la carga con una instalación de Claude Code.
 
 ## Uso responsable
 
@@ -50,3 +53,4 @@ La guía principal incluye criterios de formularios locales y remotos, reportes 
 ## Evaluación
 
 - [Evaluación guiada de migración y desarrollo APEX](evals/evaluacion-guiada-2026-11-07.md): revisión de escenarios documentales; no equivale a ejecutar un agente remoto.
+- [Aceptación Runtime para Workflow en APEX](docs/apex-workflow-runtime-acceptance.md): dashboard, reportes por estado, formularios, botones, transiciones por API y evidencia de tracking.
