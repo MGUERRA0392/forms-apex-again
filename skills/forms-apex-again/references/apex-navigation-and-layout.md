@@ -5,7 +5,7 @@
 Usa Page Designer y Universal Theme instalado para seleccionar Page Template, Region Template, Item Template, Button Template y Template Options. Los nombres y propiedades varían por tema, versión y plugins.
 
 - Encabezado estándar con título/breadcrumb; no dupliques títulos en varias regiones.
-- En un Hero, ubica acciones donde el template las dibuja (por ejemplo, Next). Un botón en slot inválido puede quedar en Invalid Slot/Not Rendered.
+- En un Hero, ubica acciones donde el template las dibuja (por ejemplo, Next). Un botón en slot inválido puede quedar en Invalid Slot/Not Rendered. Comprueba también los atributos del region template que condicionan el render, como la imagen/icono; que los controles aparezcan en el árbol no garantiza que la región ni sus botones se muestren.
 - Reportes y contenido en Body; usa Right Column o Left Column cuando el contenido sea navegación/resumen lateral.
 - Para cada región verifica Properties y Attributes: la plantilla puede exponer atributos propios y opciones que no aparecen en otra.
 - Aplica template options existentes para iconos, tamaño, posición y estilo. No inventes selectores DOM ni CSS para sustituir una opción nativa.
