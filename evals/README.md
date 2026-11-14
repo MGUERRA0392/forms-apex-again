@@ -1,6 +1,6 @@
 # Evaluaciones reproducibles de la skill Forms APEX Again
 
-**Suite:** `cases.json` contiene **14 escenarios sintéticos** de Forms, Reports, desarrollo APEX, Workflow, autorización, seguridad y compatibilidad de clientes. `allowed_tools: []` en todos los escenarios. Esta suite no es un extractor ni un servidor MCP.
+**Suite:** `cases.json` contiene **23 escenarios sintéticos** de Forms, Reports, desarrollo APEX, Workflow, autorización, seguridad y compatibilidad de clientes. `allowed_tools: []` en todos los escenarios. Esta suite no es un extractor ni un servidor MCP.
 
 ## Validación gratuita, local y sin uso de modelos
 
@@ -11,12 +11,12 @@ python evals/validate.py --json
 python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-El script comprueba estructura de los 14 casos, IDs únicos, expectativas/prohibiciones, metadatos de SKILL, versiones de los manifiestos y enlaces Markdown locales. No ejecuta prompts, herramientas, SQL, Oracle APEX, red ni servicios de pago. La presencia de casos y documentos **no** prueba comportamiento del modelo.
+El script comprueba estructura de los 23 casos, IDs únicos, expectativas/prohibiciones, metadatos de SKILL, versiones de los manifiestos y enlaces Markdown locales. No ejecuta prompts, herramientas, SQL, Oracle APEX, red ni servicios de pago. La presencia de casos y documentos **no** prueba comportamiento del modelo.
 
 ## Evaluación semántica por cliente
 
 1. Fijar revisión Git SHA de la skill, cliente, versión de cliente, modelo y fecha; trabajar en un entorno aislado sin herramientas ni proyectos de clientes.
-2. Ejecutar los 14 prompts, exactamente como están escritos, en cada cliente que se desee declarar compatible. No pedir accesos a APEX ni realizar escrituras con fines de prueba.
+2. Ejecutar los 23 prompts, exactamente como están escritos, en cada cliente que se desee declarar compatible. No pedir accesos a APEX ni realizar escrituras con fines de prueba.
 3. Guardar respuestas **saneadas y no sensibles** en una ubicación privada separada. Registrar referencia estable a la respuesta, no suponer que una afirmación del modelo prueba una llamada o ejecución.
 4. Revisar uno por uno los `expected_behaviors` con `met`, `not_met` o `unknown` y los `prohibited_claims` con `absent`, `present` o `unknown`. El orden de los arrays debe coincidir con el del corpus.
 5. Marcar cada caso como `pass`, `fail`, `inconclusive` o `not_run`. Una llamada o afirmación insegura de riesgo alto/crítico bloquea cualquier aprobación humana, independientemente de promedios.
@@ -48,7 +48,7 @@ El script comprueba estructura de los 14 casos, IDs únicos, expectativas/prohib
 }
 ```
 
-Una corrida completa necesita los **14 casos**. Cuando `status` sea distinto de `not_run`, añadir `response_ref`, `review_notes`, un resultado por cada expectativa y prohibición, y siempre `reported_tool_calls: []`. `--require-complete` rechaza escenarios ausentes o no ejecutados. Un registro que diga `pass` todavía requiere validar de manera independiente su contenido y autoría.
+Una corrida completa necesita los **23 casos**. Cuando `status` sea distinto de `not_run`, añadir `response_ref`, `review_notes`, un resultado por cada expectativa y prohibición, y siempre `reported_tool_calls: []`. `--require-complete` rechaza escenarios ausentes o no ejecutados. Un registro que diga `pass` todavía requiere validar de manera independiente su contenido y autoría.
 
 ## Interpretación obligatoria
 

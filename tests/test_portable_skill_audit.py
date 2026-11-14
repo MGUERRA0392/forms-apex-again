@@ -41,13 +41,19 @@ class PortableSkillAuditTests(unittest.TestCase):
         cls.corpus = json.loads((ROOT / "evals/cases.json").read_text(encoding="utf-8"))
         cls.errors, cls.index = validation.validate_cases(cls.corpus)
 
-    def test_fourteen_cases_cover_forms_reports_apex_and_security(self):
+    def test_cases_cover_forms_reports_apex_and_security(self):
         self.assertEqual(self.errors, [])
-        self.assertEqual(self.corpus["case_count"], 14)
-        self.assertEqual(len(self.index), 14)
+        self.assertEqual(self.corpus["case_count"], 23)
+        self.assertEqual(len(self.index), 23)
         cats = {c["category"] for c in self.corpus["cases"]}
         self.assertTrue({"forms_inspection", "reports", "apex_design", "workflow",
                          "security", "prompt_injection", "compatibility"}.issubset(cats))
+        required = {"query-multirecord-master-detail", "dependent-lov-and-validation",
+                    "forms-trigger-navigation-global-library", "unknown-forms-logic",
+                    "apex-232-242-target-compatibility", "apex-261-262-generation",
+                    "apexrest-available", "apexrest-optional-unavailable",
+                    "invalid-ai-blueprint", "unauthorized-operation"}
+        self.assertTrue(required.issubset(self.index))
 
     def test_case_id_duplicates_are_rejected(self):
         bad = json.loads(json.dumps(self.corpus))

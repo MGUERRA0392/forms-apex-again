@@ -55,7 +55,7 @@ La guía principal incluye criterios de formularios locales y remotos, reportes 
 
 La [auditoría del 2026-11-13](docs/AUDITORIA-2026-11-13.md) diferencia las capacidades de esta **skill de instrucciones** frente a herramientas opcionales de extracción Python, MCP, SQLcl o APEXREST. Consulta la [matriz de capacidades y clientes](docs/COMPATIBILIDAD-Y-LIMITES.md) antes de afirmar compatibilidad de ejecución.
 
-La suite `evals/cases.json` define **14 escenarios sintéticos** de Forms, Reports, APEX, Workflow y seguridad, con instrucciones para [evaluación y registro de resultados](evals/README.md). Para ejecutar controles **estructurales locales sin servicios externos**:
+La suite `evals/cases.json` define **23 escenarios sintéticos** de Forms, Reports, APEX, Workflow y seguridad, con instrucciones para [evaluación y registro de resultados](evals/README.md). Para ejecutar controles **estructurales locales sin servicios externos**:
 
 ```sh
 python evals/validate.py --json

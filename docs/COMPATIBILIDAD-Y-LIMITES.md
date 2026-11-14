@@ -15,7 +15,7 @@ Este repositorio **público** distribuye solamente una skill portable con archiv
 
 ## Matriz de clientes (estado al 2026-11-13)
 
-| Cliente | Material de integración | Ejecución de la suite de 14 casos |
+| Cliente | Material de integración | Ejecución de la suite de 23 casos |
 |---|---|---|
 | Codex | Carpeta de skill estándar | **No evaluada en esta auditoría** |
 | Claude Code | `.claude-plugin/plugin.json` y skill | **No evaluada en esta auditoría** |
