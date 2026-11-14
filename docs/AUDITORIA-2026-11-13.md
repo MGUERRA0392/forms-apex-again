@@ -5,7 +5,7 @@
 ## Inventario verificado
 
 - `skills/forms-apex-again/SKILL.md`: frontmatter con `name`/`description`, routing por tarea, seguridad, versiones y criterios de evidencia.
-- 18 referencias técnicas en `skills/forms-apex-again/references/` sobre Forms/Reports/APEX, diseño, workflow y trazabilidad.
+- 17 referencias técnicas en `skills/forms-apex-again/references/` sobre Forms/Reports/APEX, diseño, workflow y trazabilidad.
 - `README.md`, `docs/apex-workflow-runtime-acceptance.md` y `evals/revision-2026-11-07.md` muestran guía de uso y tres escenarios de **revisión estática**, no evaluación funcional real.
 - `plugin.json` y `.claude-plugin/plugin.json`: versión `1.0.0`. No existe implementación Python/MCP propia en este repositorio y no debe atribuirse ninguna herramienta de otro repositorio a esta skill.
 - No había `evals/cases.json`, test runner ni GitHub Actions; tampoco archivo LICENSE. Enlaces internos existentes en la revisión inicial.
