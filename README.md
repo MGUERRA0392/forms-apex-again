@@ -52,3 +52,18 @@ La guía principal incluye criterios de formularios locales y remotos, reportes 
 - Integración segura de APEXREST, límites por versión y destino: [guía de APEXREST](skills/forms-apex-again/references/apexrest-integration.md).
 - [Revisión estática del paquete](evals/revision-2026-11-07.md): escenarios de migración, desarrollo APEX y APEXREST; no sustituye una ejecución real del agente.
 - [Aceptación Runtime para Workflow en APEX](docs/apex-workflow-runtime-acceptance.md): dashboard, reportes por estado, formularios, botones, transiciones por API y evidencia de tracking.
+
+## Auditoría de calidad y evaluaciones
+
+La [auditoría del 2026-11-13](docs/AUDITORIA-2026-11-13.md) diferencia las capacidades de esta **skill de instrucciones** frente a herramientas opcionales de extracción Python, MCP, SQLcl o APEXREST. Consulta la [matriz de capacidades y clientes](docs/COMPATIBILIDAD-Y-LIMITES.md) antes de afirmar compatibilidad de ejecución.
+
+La suite `evals/cases.json` define **23 escenarios sintéticos** de Forms, Reports, APEX, Workflow y seguridad, con instrucciones para [evaluación y registro de resultados](evals/README.md). Para ejecutar controles **estructurales locales sin servicios externos**:
+
+```sh
+python evals/validate.py --json
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+GitHub Actions ejecuta el corpus y la validación de enlaces/manifiestos con Python 3.9 y 3.11. Esas pruebas **no** ejecutan modelos, validan permisos Oracle ni comprueban runtime. Una skill instalada no acredita que se haya activado correctamente en Codex, Claude Code u otro cliente.
+
+**Licencia:** el archivo raíz [`LICENSE`](LICENSE) declara MIT para el contenido original. La licencia no cubre automáticamente materiales de terceros, que conservan sus propios términos. Mantén respuestas de modelos, artefactos Forms, capturas y datos reales **fuera de este repositorio público**.
