@@ -43,12 +43,10 @@ El usuario proporciona sus propios artefactos, permisos y conexiones. No incluya
 
 La guía principal incluye criterios de formularios locales y remotos, reportes por estado, navegación, templates/atributos, modal de Workflow y validación por capas. Usa ejemplos propios del proyecto destino y confirma su versión y contrato antes de aplicar el patrón.
 
-
 ## Herramienta opcional y revisión
 
 - Integración segura de APEXREST, límites por versión y destino: [guía de APEXREST](skills/forms-apex-again/references/apexrest-integration.md).
 - [Revisión estática del paquete](evals/revision-2026-11-07.md): escenarios de migración, desarrollo APEX y APEXREST; no sustituye una ejecución real del agente.
-
 - [Aceptación Runtime para Workflow en APEX](docs/apex-workflow-runtime-acceptance.md): dashboard, reportes por estado, formularios, botones, transiciones por API y evidencia de tracking.
 
 ## Auditoría de calidad y evaluaciones
@@ -64,4 +62,4 @@ python -m unittest discover -s tests -p "test_*.py" -v
 
 GitHub Actions ejecuta el corpus y la validación de enlaces/manifiestos con Python 3.9 y 3.11. Esas pruebas **no** ejecutan modelos, validan permisos Oracle ni comprueban runtime. Una skill instalada no acredita que se haya activado correctamente en Codex, Claude Code u otro cliente.
 
-**Licencia:** la visibilidad pública de GitHub no concede automáticamente derechos open source. Actualmente no se encontró un archivo `LICENSE`; su selección queda pendiente de decisión del propietario. Mantén respuestas de modelos, artefactos Forms, capturas y datos reales **fuera de este repositorio público**.
+**Licencia:** el archivo raíz [`LICENSE`](LICENSE) declara MIT para el contenido original. La licencia no cubre automáticamente materiales de terceros, que conservan sus propios términos. Mantén respuestas de modelos, artefactos Forms, capturas y datos reales **fuera de este repositorio público**.
