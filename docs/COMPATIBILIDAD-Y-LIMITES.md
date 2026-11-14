@@ -32,4 +32,4 @@ El repositorio público debe contener exclusivamente patrones genéricos y ejemp
 
 ## Publicación y licencias
 
-El repositorio público es visible para lectura, pero **visibilidad pública no implica licencia open source**. No se encontró archivo `LICENSE` en la línea base de esta auditoría. Antes de promoverlo como reutilizable por terceros, elegir y publicar una licencia apropiada de forma deliberada; no asignar automáticamente una licencia desde un auditor.
+El archivo raíz [`LICENSE`](../LICENSE) declara la licencia MIT para el contenido original de este repositorio. Las fuentes, marcas y materiales de terceros conservan sus propios términos y no quedan relicenciados por el archivo del proyecto. La visibilidad pública por sí sola no determina una licencia.
