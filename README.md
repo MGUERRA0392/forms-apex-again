@@ -35,18 +35,20 @@ El archivo raíz `plugin.json` empaqueta el skill bajo la estructura portable de
 
 El plugin solo distribuye instrucciones y referencias: no instala Forms Builder, lectores binarios, MCP, conectores ni servicios de runtime. Estos comandos son instrucciones de prueba; no se ha validado aquí la carga con una instalación de Claude Code.
 
+## Licencia
+
+El contenido original de este repositorio se distribuye bajo la licencia MIT; consulta [LICENSE](LICENSE). Las fuentes, marcas y materiales de terceros conservan sus propios términos y no se relicencian con este archivo.
+
 ## Uso responsable
 
-El usuario proporciona sus propios artefactos, permisos y conexiones. No incluyas credenciales en prompts, código cliente o repositorios. Mantén fuentes, datos y evidencia del cliente en ubicaciones autorizadas; publica únicamente material genérico revisado. Revisa licencia y atribución de las fuentes enlazadas antes de reutilizar material sustancial.
+El usuario proporciona sus propios artefactos, permisos y conexiones. No incluyas credenciales en prompts, código cliente o repositorios. Mantén fuentes, datos y evidencia del cliente en ubicaciones autorizadas; publica únicamente material genérico revisado. Verifica los términos de cualquier fuente externa antes de reutilizarla.
 
 ## Desarrollo APEX con Workflow
 
 La guía principal incluye criterios de formularios locales y remotos, reportes por estado, navegación, templates/atributos, modal de Workflow y validación por capas. Usa ejemplos propios del proyecto destino y confirma su versión y contrato antes de aplicar el patrón.
 
-
 ## Herramienta opcional y revisión
 
 - Integración segura de APEXREST, límites por versión y destino: [guía de APEXREST](skills/forms-apex-again/references/apexrest-integration.md).
 - [Revisión estática del paquete](evals/revision-2026-11-07.md): escenarios de migración, desarrollo APEX y APEXREST; no sustituye una ejecución real del agente.
-
 - [Aceptación Runtime para Workflow en APEX](docs/apex-workflow-runtime-acceptance.md): dashboard, reportes por estado, formularios, botones, transiciones por API y evidencia de tracking.
